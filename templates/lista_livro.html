@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    CAOS - Lista
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block conteudo %}
+<main>
+    <h3>Lista de Livros</h3>
+{% for livro in livros %}
+    <div>
+        <strong>{{ livro.nome }}</strong> — {{ livro.autor }} (R$ {{ livro.valor }})
+        <br>
+        {{ livro.mensagem }}
+        <hr>
+    </div>
+{% endfor %}
+</main>
+{% endblock %}
+
